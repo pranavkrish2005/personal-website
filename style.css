@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: serif;
+    font-size: 70px;
+    margin: 0;
+    padding-top: 400px;
+}
+
+p {
+    margin: 500px;
+}
+
+hr {
+    border-top: 1px solid white;
+}
+
+
+#infinite-scrolling {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    background: url("bg.jpg");
+    background-repeat: repeat;
+    background-size: auto 100%;
+    /*s is the value for speed*/
+    animation: infinite-background 400s linear infinite;
+}
+
+
+@keyframes infinite-background {
+    from {
+        background-position: 0 0;
+    }
+
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: -10000px 0;
+    }
+}
