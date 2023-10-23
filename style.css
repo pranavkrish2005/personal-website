@@ -1,73 +1,175 @@
-body {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+html {
     margin: 0;
     padding: 0;
-    position: relative;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: rgb(20, 20, 20);
+    overflow-x: hidden;
 }
+
 
 h1 {
-    color: white;
-    text-align: center;
-    font-family: serif;
-    font-size: 70px;
     margin: 0;
-    padding-top: 400px;
-}
-
-p {
-    margin: 500px;
-}
-
-hr {
-    border-top: 1px solid white;
-}
-
-
-#infinite-scrolling {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 100px;
-    background: url("images/grad_mod.jpg");
-    background-repeat: repeat;
-    background-size: auto 100%;
-    /*s is the value for speed*/
-    animation: infinite-background 400s linear infinite;
-}
-
-
-@keyframes infinite-background {
-    from {
-        background-position: 0 0;
-    }
-
-    /*use negative width if you want it to flow right to left else and positive for left to right*/
-    to {
-        background-position: -10000px 0;
-    }
-}
-
-button {
-    background-color: #ac36be;
-    border: none;
-    color: white;
-    padding: 100px 100px;
+    font-size: 120px;
     text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 15px 15px;
-    cursor: pointer;
-    border-radius: 12px;
-    /* smooth transition when enlarging image */
-    transition: transform 0.5s;
-    font-weight: bold;
+    font-family: 'Lora', serif;
 }
 
-button:hover {
-    /* linear gradient over the background image */
-    background: linear-gradient(rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0.5)),
-    url("images/grad_mod.jpg");
-    background-size: auto 100%;
-    /* enlarge the image on hover */
-    transform: scale(1.2);
+#text-fill {
+    width: auto;
+    color: rgb(0, 167, 159);
+    padding-top: 100px;
+    animation: slide-in-left 2s ease-in-out forwards;
+}
+
+#FirstNameLine {
+
+    height: 0px;
+    width: 0px;
+    translate: 65%;
+    border-top: 5px solid rgb(0, 167, 159);
+
+    -webkit-animation: increaseFirst 3s;
+    -moz-animation: increaseFirst 3s;
+    -o-animation: increaseFirst 3s;
+    animation: increaseFirst 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    margin-bottom: 200px;
+}
+
+@keyframes increaseFirst {
+    100% {
+        width: 450px;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-15%);
+        opacity: 1;
+    }
+}
+
+#LastNameLine {
+    height: 0px;
+    width: 0px;
+    transform: translateX(100%);
+    border-top: 5px solid rgb(255, 255, 255);
+
+    -webkit-animation: increaseLast 3s;
+    -moz-animation: increaseLast 3s;
+    -o-animation: increaseLast 3s;
+    animation: increaseLast 3s 2s forwards;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes increaseLast {
+    from {
+        width: 1px;
+    }
+
+    to {
+        transform: translateX(135%);
+        width: 35%;
+    }
+}
+
+
+img {
+    width: 30%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+img:hover {
+    opacity: 1;
+    z-index: 2;
+}
+
+#outline {
+    color: white;
+    animation: slide-in-right 2s ease-in-out forwards;
+    padding-top: 0%;
+    margin-bottom: 300px;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(15%);
+        opacity: 1;
+    }
+}
+
+.seperator {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-right: 99vw solid transparent;
+    border-bottom: 14vw solid rgb(122, 38, 200);
+}
+
+nav {
+    background-color: rgb(122, 38, 200);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
+#about, #projects, #contact {
+    width: 300px;
+    height: 200px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
     color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    border: 0;
+    margin: 100px 0px;
+    border-radius: 5px;
+    box-shadow:rgb(20, 20, 20) 7px 7px 5px 0px;
+    transition: 0.5s;
+}
+
+#about:hover, #projects:hover, #contact:hover {
+    background-image: url("images/back.jpg");
+    color: white;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+#about:hover::after {
+    transition: 0.5s;
+    transform: scale(0.8);
 }
