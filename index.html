@@ -1,59 +1,132 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pranav Krishnan - Personal Website</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div id="full-wrapper">
-        <header>
-            <h1 id="text-fill">Pranav</h1>
-            <div id="FirstNameLine"></div>
-            <img src="/Users/pranav/Downloads/profile_picture.jpeg" alt="Pranav Krishnan">
-            <div id="LastNameLine"></div>
-            <h1 id="outline">Krishnan</h1>
-            <div class="seperator"></div>
-            <nav>
-                    <button id="about">About</button>
-                    <button id="projects">Projects</button>
-                    <button id="contact">Contact</button>
-            </nav>
-        </header>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Insert your bio here.</p>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="#">Project 1</a></li>
-                    <li><a href="#">Project 2</a></li>
-                    <li><a href="#">Project 3</a></li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br>
+<head>
+    <title>Pranav Krishnan Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea><br>
+<body>
+    <div class="wrapper">
+        <header id="top-header">
+            <img class="background" src="assets/images/my-image.png" alt="Pranav Krishnan" />
+            <div id="header">
+                <h1 class="capitalize" id="name">Pranav Krishnan</h1>
+                <p id="skills"></p>
+            </div>
+            </header>
+        <!-- Main body -->
+            
+            <div id="main">
+                <header class="heading-box">
+                    <h2 class="capitalize hidden-1">Projects</h2>
+                </header>
 
-                    <input type="submit" value="Submit">
-                </form>
-            </section>
-        </main>
+                <div id="Projects">
+                    <section class="alternating box">
+                        <section class="right">
+                            <a href="https://pranavkrish2005.github.io/weather-app/" class="image-link">
+                                <div class="image-container">
+                                    <i class="fas fa-cloud"></i>
+                                    <img src="assets/images/coding-img.jpeg" alt="Coding Image">
+                                </div>
+                            </a>
+                            <div class="description">
+                                <h2 class="capitalize hidden-1">Weather Forecast App</h2>
+                                <p>React weather app to view current weather and forecast in any city</p>
+                            </div>
+                        </section>
+                
+                    <section class="left">
+                        <a href="https://github.com/pranavkrish2005/Stock-prediction-AI" class="image-link">
+                            <div class="image-container">
+                                <i class="fas fa-arrow-trend-up"></i>
+                                <img src="assets/images/coding-img.jpeg" alt="Coding Image">
+                            </div>
+                        </a>
+                        <div class="description">
+                            <h2 class="capitalize hidden-1">Stock Prediction AI</h2>
+                            <p>AI trained to predict the stock price of SPY</p>
+                        </div>
+                    </section>
+                
+                    <section class="right">
+                        <a href="https://github.com/pranavkrish2005/Encryption-message-app" class="image-link">
+                            <div class="image-container">
+                                <i class="fas fa-message"></i>
+                                <img src="assets/images/coding-img.jpeg" alt="Coding Image">
+                            </div>
+                        </a>
+                        <div class="description">
+                            <h2 class="capitalize hidden-1">Encryption message App</h2>
+                            <p>This is an online messaging website that communicates the importance of digital encryption and
+                                demonstrates a simplified model of how a messaging website works.</p>
+                        </div>
+                    </section>
+                </section>
+                </div>
+                
+
+                <section id="normal-box">
+                        <header>
+                            <h2 class="capitalize hidden-1">Experience and Skills</h2>
+                        </header>
+                        <section>
+                            <header>
+                                <h3 class="capitalize hidden-1">Skills</h3>
+                            </header>
+                            <p>Java, Data Structures and Algorithms, Python, Machine Learning, React JS, Express JS,
+                                Node JS, Typescript, HTML, CSS and JavaScript, SQL, NoSQL, C, C++, Git version control
+                            </p>
+                        </section>
+                        <hr />
+                        <section>
+                            <header>
+                                <h3 class="capitalize hidden-1">Experience</h3>
+                                <p>Enspire Academy : Public Speaking Internship</p>
+                            </header>
+                            <p>Coached over 50 students in public speaking, debate, and persuasive speeches and content
+                                Undertook the role of class leader and professional environment and learned leadership
+                                skills and time management
+                                Enhanced student’s confidence to speak in front of over 50 audience members
+                            </p>
+                            <header>
+                                <p>WWP Devs : Co founder / Co president</p>
+                            </header>
+
+                            <p>Directed and supervised a team responsible for coaching 20+ students in AP computer
+                                science A, Java, and Python.
+                                Managed classes and developed a comprehensive curriculum for the AP exam improving
+                                student’s test scores by 15%
+                            </p>
+                        </section>
+                </section>
+            </div>
+
+        <!-- Footer -->
         <footer>
-            <p>&copy; 2021 Pranav Krishnan</p>
-        </footer>
-        </div>
 
-        <script src="script.js"></script>
-    </body>
+                <header id="connect-header">
+                    <h2 class="capitalize">Connect with me</h2>
+                </header>
+
+                <h3 id="email">Email : pranavkrish2005@gmail.com<h3>
+
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/pranav-krishnan-641a42218/"
+                            class="fa-brands fa-linkedin"></a></li>
+                    <li><a href="mailto:pranavkrish2005@gmail.com" class="fa-solid fa-envelope"></a></li>
+                    <li><a href="https://github.com/pranavkrish2005" class="fa-brands fa-github"></a></li>
+                </ul>
+
+        </footer>
+    </div>
+
+    <script src="assets/js/typewrite.js"></script>
+    <script src="assets/js/fadeanimation.js"></script>
+</body>
+
 </html>
