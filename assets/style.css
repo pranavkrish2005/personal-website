@@ -116,6 +116,30 @@ h3 {
                 blink-caret .75s step-end infinite;
 }
 
+.flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px;
+        font-size: 1.3em;
+        margin-top: 15px;
+    }
+    
+    .flex-item {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .label {
+        font-weight: bold;
+        min-width: 200px;
+        margin-right: 40px;
+    }
+    
+    .content {
+        flex: 1;
+    }
+
 @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: orange; }
@@ -210,6 +234,10 @@ h3 {
         margin: 2em 20%;
 }
 
+#normal-box .flex-item {
+        margin: 1em 2em;
+}
+
 #normal-box p {
         font-size: 20px;
         font-family: serif;
@@ -218,7 +246,7 @@ h3 {
 
 #normal-box header p {
         text-align: center;
-        font-size: 25px;
+        font-size: 30px;
         font-family: 'Lora', serif;
 }
 
@@ -230,7 +258,7 @@ h3 {
 
 #normal-box h3 {
         padding-top: 0.5em;
-        font-size: 30px;
+        font-size: 35px;
 }
 
 /* connect */
